@@ -1,43 +1,43 @@
 <template>
 
-    <lightning-card icon-name="utility:Appointment" >
-        <p class="slds-align_absolute-center" style=" font-size: 30px"  >Appointment From</p>
-    
-    <lightning-layout-item class="slds-p-around_xx-small" size="12">
-    <lightning-layout>
-    <lightning-layout-item class="slds-p-around_xx-small" size=6>
-    
-    <div class="slds-m-around_medium">
-       <c-lwc_2908_contact_customfield onselected={myLookupHandle}></c-lwc_2908_contact_customfield>
-    </div>
-    
-    <div class="slds-p-around_medium">
-        <lightning-input type="datetime-local" label="Appointment Date and Time"  onchange={handleDateTimeChange} required="true"></lightning-input>
-        {isDateAvailable}
-        <br/>
-        <br/>
-            <lightning-button label="Check Availability" variant="Brand" onclick={checkAvailability}></lightning-button>
-    </div>
-    
-    </lightning-layout-item>
-    
-    <lightning-layout-item class="slds-p-around_xx-small" size=6>
-    
-    <div class="slds-p-around_medium">
-        <lightning-input label="Subject" value={subject} onchange={handleSubjectChange} required="true"></lightning-input>
-    </div>
-    
-    <div class="slds-p-around_medium">
-        <lightning-textarea label="Description" value={description} onchange={handleDescriptionChange} required="true"></lightning-textarea>
-    </div>
-    
-    </lightning-layout-item>
-    
-    </lightning-layout>
-    </lightning-layout-item>
-    </lightning-card>
+<lightning-card icon-name="utility:Appointment" >
+    <p class="slds-align_absolute-center" style=" font-size: 30px"  >Appointment From</p>
 
-    <lightning-card>
-        <lightning-button class="slds-align_absolute-center" label="Book Appointment" variant="brand" onclick={BookAppointment}></lightning-button>
-    </lightning-card>
-    </template>
+<lightning-layout-item class="slds-p-around_xx-small" size="12">
+<lightning-layout>
+<lightning-layout-item class="slds-p-around_xx-small" size=6>
+
+<div class="slds-m-around_medium">
+   <c-lwc_2908_contact_customfield onselected={myLookupHandle}></c-lwc_2908_contact_customfield>
+</div>
+
+<div class="slds-p-around_medium">
+    <lightning-input type="datetime-local" label="Appointment Date and Time"  onchange={handleDateTimeChange} required="true"></lightning-input>
+    {isDateAvailable}
+    <br/>
+    <br/>
+        <lightning-button label="Check Availability" variant="Brand" onclick={checkAvailability}></lightning-button>
+</div>
+
+</lightning-layout-item>
+
+<lightning-layout-item class="slds-p-around_xx-small" size=6>
+
+<div class="slds-p-around_medium">
+    <lightning-input label="Subject" value={subject} onchange={handleSubjectChange} required="true"></lightning-input>
+</div>
+
+<div class="slds-p-around_medium">
+    <lightning-textarea label="Description" value={description} onchange={handleDescriptionChange} required="true"></lightning-textarea>
+</div>
+
+</lightning-layout-item>
+
+</lightning-layout>
+</lightning-layout-item>
+</lightning-card>
+
+<lightning-card>
+    <lightning-button class="slds-align_absolute-center" label="Book Appointment" variant="brand" onclick={BookAppointment}></lightning-button>
+</lightning-card>
+</template>
